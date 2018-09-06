@@ -1,0 +1,19 @@
+LOG IN
+git config global --user.name "username"
+git config global --user.email "markosh94@hotmail.com"
+
+
+git clone https://github.com/Markosh94/teambuilder.git - pull the project for the first time to your machine
+
+
+git status - will show if current version is up to date, and what changes you have made
+
+
+git commit -a -m "comment"       - commit all changes
+
+git remote   - shows where to push, e.g. origin
+git branch   - shows what branchs, e.g. master
+
+git push origin master
+
+
