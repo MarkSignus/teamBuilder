@@ -82,8 +82,18 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 # }
 # =============================================================================
 
+liamDataBase= {
+        'default':{
+                'ENGINE':'django.db.backends.mysql',
+                'NAME': 'djangoproject',
+                'USER': 'root',
+                'PASSWORD': 'root',
+                'HOST':'/Applications/MAMP/tmp/mysql/mysql.sock',
+                'PORT':'8889'
+                }
+        }
 
-DATABASES = {
+markDataBase= {
         'default':{
                 'ENGINE':'django.db.backends.mysql',
                 'NAME': 'djangoproject',
@@ -93,6 +103,7 @@ DATABASES = {
                 'PORT':''
                 }
         }
+DATABASES =liamDataBase
         
         
         
