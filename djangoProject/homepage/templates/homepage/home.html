@@ -1,0 +1,46 @@
+{% extends "homepage/header.html" %}
+{% block content %}
+<h2>Teambuilder</h2>
+</br>
+
+<!--EACH BUTTON BOLLOW IS CONTAINED IN A DIV. THESE DIVS ARE IN TWO ROWS AND TWO COLUMNS-->
+
+<!--tO LINK THEM TO NEW PAGES, ADD A HREF TO THE BUTTON-->
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-1">
+				  <br>
+				  <center>
+					<button type="button" class="btn btn-outline-primary" >Add User</button>
+				  </center>
+			  </div>
+
+			  <div class="col-sm-1">
+				  <br>
+				  <center>
+					<button type="button" class="btn btn-outline-secondary">Add Project</button>
+				  </center>
+			  </div>
+	    </div>
+		<div class="row">
+			  <div class="col-sm-1">
+				  <br>
+				  <center>
+					<button type="button" class="btn btn-outline-success">Settings</button>
+				  </center>
+			  </div>
+
+			  <div class="col-sm-1">
+				  <br>
+				  <center>
+					<button type="button" class="btn btn-outline-danger">Load prev</button>
+
+				  </center>
+			  </div>
+
+		</div>
+	</div>
+
+
+
+{% endblock %}
