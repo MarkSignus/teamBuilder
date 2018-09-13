@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'homepage',
+    'addUser',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -104,7 +105,7 @@ markDataBase= {
                 'PORT':''
                 }
         }
-DATABASES =markDataBase
+DATABASES =liamDataBase
         
         
         

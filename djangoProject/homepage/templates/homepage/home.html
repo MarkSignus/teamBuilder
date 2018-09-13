@@ -1,9 +1,10 @@
 {% extends "homepage/header.html" %}
 {% block content %}
-<h2>Teambuilder</h2>
-</br>
+<h2>TeamBuilder</h2>
+
 
 <!--EACH BUTTON BOLLOW IS CONTAINED IN A DIV. THESE DIVS ARE IN TWO ROWS AND TWO COLUMNS-->
+<!--LIAM: I changed it so that they each appear on a new row, when in two columns they squashed together when you made the screen smaller -->
 
 <!--tO LINK THEM TO NEW PAGES, ADD A HREF TO THE BUTTON-->
 	<div class="container-fluid" style="min-height:95%; ">
@@ -11,14 +12,7 @@
 			  <div class="col-sm-1">
 				  <br>
 				  <center>
-					<button type="button" class="btn btn-outline-primary" >Add User</button>
-				  </center>
-			  </div>
-
-			  <div class="col-sm-1">
-				  <br>
-				  <center>
-					<button type="button" class="btn btn-outline-secondary">Add Project</button>
+					<button type="button" class="btn btn-outline-secondary" >Add User</button>
 				  </center>
 			  </div>
 	    </div>
@@ -26,21 +20,25 @@
 			  <div class="col-sm-1">
 				  <br>
 				  <center>
-					<button type="button" class="btn btn-outline-success">Settings</button>
+					<button type="button" class="btn btn-outline-secondary">Add Project</button>
 				  </center>
 			  </div>
-
+		</div>
+		<div class="row">
 			  <div class="col-sm-1">
 				  <br>
 				  <center>
-					<button type="button" class="btn btn-outline-danger">Load prev</button>
-
+					<button type="button" class="btn btn-outline-secondary">Settings</button>
 				  </center>
 			  </div>
-
+	    </div>
+		<div class="row">
+			  <div class="col-sm-1">
+				  <br>
+				  <center>
+					<button type="button" class="btn btn-outline-secondary">Load prev</button>
+				  </center>
+			  </div>
 		</div>
 	</div>
-
-
-
 {% endblock %}
