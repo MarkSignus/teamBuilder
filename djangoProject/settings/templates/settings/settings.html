@@ -1,0 +1,44 @@
+{% extends "homepage/header.html" %}
+{% block content %}
+<!--tO LINK THEM TO NEW PAGES, ADD A HREF TO THE BUTTON-->
+<!--ACTIONS ARE ALL WRONG. NEED TO CHANGE AT A LATER DATE-->
+  <div class="container-fluid" style="min-height:95%; ">
+    <div class="row">
+        <div class="col-sm-1">
+          <br>
+          <center>
+            <form action='/addUser/'>
+              <input type="submit" class="btn btn-outline-secondary" value="Add Partner" />
+          </form>
+          <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
+          </center>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-sm-1">
+          <br>
+          <center>
+            <form action='/addProject/'>
+              <input type="submit" class="btn btn-outline-secondary" value="Add Skill" />
+          </form>
+          </center>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1">
+          <br>
+          <center>
+          <button type="button" class="btn btn-outline-secondary">Add Location</button>
+          </center>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-sm-1">
+          <br>
+          <center>
+          <button type="button" class="btn btn-outline-secondary">Add Client</button>
+          </center>
+        </div>
+    </div>
+  </div>
+{% endblock %}
