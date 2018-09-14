@@ -1,0 +1,108 @@
+{% extends "homepage/header.html" %}
+{% block content %}
+
+<head>
+<script>
+$(function() {
+    $("body").on("change", "#skills", function() {
+    $("#selection").val($(this).val());
+  });
+});
+</script>
+</head>
+<body>
+<h2>New Project </h2>
+  <form>
+
+    </br>   
+    <div class="col-sm-4">
+      <div class="row">
+        <div class="form-group">
+          <label for="number">Project ID </label>
+          <input type="number" class="form-control" id="number" placeholder="Enter Project ID">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="number">Fee</label>
+          <input type="number" class="form-control" id="number" placeholder="Enter estimate fee ($)">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="number">Duration</label>
+          <input type="number" class="form-control" id="number" placeholder="Enter estimate duration (hours)">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="number">Partner</label>
+          <input type="number" class="form-control" id="number" placeholder="Enter partner ID">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="number">Client</label>
+          <input type="number" class="form-control" id="number" placeholder="Enter client ID">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Location</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option selected>--Select Below--</option>
+            <option value>London</option>
+            <option value>Sith Ifrika</option>
+            <option value>Neutron 9</option>
+            <option value>Anfield</option>
+            <option value>End of the Rainbow</option>
+          </select>
+        </div>  
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-2">
+        <label for="skills">Skills</label>
+          <select class="form-control" id="skills">
+            <option selected>--Select Below--</option>
+            <option value>Financial Law</option>
+            <option value>Corporate Law</option>
+            <option value>Labour Law</option>
+            <option value>Property Law</option>
+            <option value>Intellectual Property Law</option>
+          </select>
+          </div>
+      <div class="col-sm-2">    
+          <label for="Minimum">Minimum value</label>
+          <select class="form-control" id="Minimum">
+            <option selected="selected" value="1">One</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+            <option value="4">four</option>
+            <option value="5">five</option>
+          </select>
+       
+      </div>
+      <div class="col-sm-2">
+          <label for="selection">Selection</label>
+          <input id='selection' class="form-control" type='text' readonly/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+          </br>
+          <button type="submit" class="btn btn-primary">Optimize</button>
+      </div>
+    </div>
+  </form>
+<body>
+
+
+{% endblock %}
