@@ -1,0 +1,213 @@
+{% extends "homepage/header.html" %}
+{% block content %}
+
+<head>
+<script>
+$(function() {
+    $("body").on("change", "#skills", function() {
+    $("#selection").val($(this).val());
+  });
+});
+</script>
+</head>
+<body>
+<h2>Add Associate</h2>
+  <form>
+
+    </br>   
+    <div class="col-sm-4">
+      <div class="row">
+        <div class="form-group">
+          <label for="number">Employee ID</label>
+          <input type="number" class="form-control" id="number" placeholder="Enter Employee ID">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group"><!--THIS CLOSES @ END-->
+          <label for="number">Availability</label>
+          <div style="display: none;"> <!--LUUUUUL  -->
+            <form class="form-inline" >
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">FIX THIS</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+            </form>
+          </div>
+          <div>
+            <form class="form-inline">
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Week 1</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+            </form>
+          </div>
+          <div>
+            <form class="form-inline">
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Week 2</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+            </form>
+          </div>
+          <div>
+            <form class="form-inline">
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Week 3</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+            </form>
+          </div>
+          <div>
+            <form class="form-inline">
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Week 4</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+            </form>
+          </div>
+          <div>
+            <form class="form-inline">
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Week 5</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Client Relationships</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option selected="">--Select Below--</option>
+              <option value>Coca Cola</option>
+              <option value>Access To Justice Ltd</option>
+              <option value>Ruski Holdings</option>
+              <option value>Brixton Conservatory</option>
+              <option value>The Pie Hole</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="exampleInputPassword1">Rate</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Your hourly rate, GBP">
+            <small id="emailHelp" class="form-text text-muted">DO NOT INCLUDE POUND SIGN!</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <label for="exampleFormControlSelect1">Skills</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option selected >--Select Below--</option>
+              <option value>Financial Law</option>
+              <option value>Corporate Law</option>
+              <option value>Labour Law</option>
+              <option value>Property Law</option>
+              <option value>Intellectual Property Law</option>
+            </select>
+        </div>
+        <div class="col-sm-4">    
+          <label for="Minimum">Level</label>
+            <select class="form-control" id="Minimum">
+              <option selected="selected" value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select> 
+        </div>
+        <div class="col-sm-4">
+          <label for="selection">Selection</label>
+          <input id='selection' class="form-control" type='text' readonly/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Location</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option selected>--Select Below--</option>
+            <option value>London</option>
+            <option value>Sith Ifrika</option>
+            <option value>Neutron 9</option>
+            <option value>Anfield</option>
+            <option value>End of the Rainbow</option>
+          </select>
+        </div>  
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2">
+        <label for="exampleFormControlSelect1">Partner Relationships</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option selected >--Select Below--</option>
+            <option value>Richard Susskind</option>
+            <option value>Nelson Mandela</option>
+            <option value>Elon Musk</option>
+            <option value>Mo Salah</option>
+            <option value>Drizzy Drake</option>
+          </select>
+      </div>
+      <div class="col-sm-2">    
+          <label for="Minimum">Rapport</label>
+          <select class="form-control" id="Minimum">
+            <option selected="selected" value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+      </div>
+      <div class="col-sm-2">
+          <label for="selection">Selection</label>
+          <input id='selection' class="form-control" type='text' readonly/>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4">
+          </br>
+          <button type="submit" class="btn btn-primary">Add Associate</button>
+      </div>
+    </div>
+  </form>
+<body>
+
+
+{% endblock %}
