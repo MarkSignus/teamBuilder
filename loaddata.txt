@@ -1,0 +1,17 @@
+
+
+
+Every app should have fixtures folder.
+Similar to templates, best practice is to include a subfolder with that app's name
+Then in that subfolder, inlcude json files to populate the models
+
+
+Code:
+
+Make new models and run
+python manage.py makemigrations
+python manage.py migrate
+
+Then populate the models with
+python manage.py loaddate "appname"/"filename".json
+e.g. python manage.py loaddata settings/load_settings_data.json

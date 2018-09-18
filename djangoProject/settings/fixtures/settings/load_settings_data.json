@@ -1,0 +1,236 @@
+[
+  {
+    "model": "settings.skill_levels",
+    "pk": 1,
+    "fields": {
+      "value": "1"
+    }
+  },
+
+  {
+    "model": "settings.skill_levels",
+    "pk": 2,
+    "fields": {
+      "value": "2"
+    }
+  },
+  {
+    "model": "settings.skill_levels",
+    "pk": 3,
+    "fields": {
+      "value": "3"
+    }
+  },
+  {
+    "model": "settings.skill_levels",
+    "pk": 4,
+    "fields": {
+      "value": "4"
+    }
+  },
+  {
+    "model": "settings.skill_levels",
+    "pk": 5,
+    "fields": {
+      "value": "5"
+    }
+  },
+
+
+
+
+
+
+
+  {
+    "model": "settings.client_levels",
+    "pk": 1,
+    "fields": {
+      "value": "1"
+    }
+  },
+
+  {
+    "model": "settings.client_levels",
+    "pk": 2,
+    "fields": {
+      "value": "2"
+    }
+  },
+  {
+    "model": "settings.client_levels",
+    "pk": 3,
+    "fields": {
+      "value": "3"
+    }
+  },
+  {
+    "model": "settings.client_levels",
+    "pk": 4,
+    "fields": {
+      "value": "4"
+    }
+  },
+  {
+    "model": "settings.client_levels",
+    "pk": 5,
+    "fields": {
+      "value": "5"
+    }
+  },
+
+
+
+
+
+
+
+
+  {
+    "model": "settings.partner_levels",
+    "pk": 1,
+    "fields": {
+      "value": "1"
+    }
+  },
+
+  {
+    "model": "settings.partner_levels",
+    "pk": 2,
+    "fields": {
+      "value": "2"
+    }
+  },
+  {
+    "model": "settings.partner_levels",
+    "pk": 3,
+    "fields": {
+      "value": "3"
+    }
+  },
+  {
+    "model": "settings.partner_levels",
+    "pk": 4,
+    "fields": {
+      "value": "4"
+    }
+  },
+  {
+    "model": "settings.partner_levels",
+    "pk": 5,
+    "fields": {
+      "value": "5"
+    }
+  },
+
+
+
+  {
+    "model": "settings.partners",
+    "pk": 1,
+    "fields": {
+      "name": "John Doe"
+    }
+  },
+  {
+    "model": "settings.partners",
+    "pk": 2,
+    "fields": {
+      "name": "Jane Doe"
+    }
+  },
+  {
+    "model": "settings.partners",
+    "pk": 3,
+    "fields": {
+      "name": "Richard Susskind"
+    }
+  },
+
+
+
+
+  {
+    "model": "settings.clients",
+    "pk": 1,
+    "fields": {
+      "name": "Bank Co"
+    }
+  },
+  {
+    "model": "settings.clients",
+    "pk": 2,
+    "fields": {
+      "name": "Pharma Co"
+    }
+  },
+  {
+    "model": "settings.clients",
+    "pk": 3,
+    "fields": {
+      "name": "Oil Co"
+    }
+  },
+
+
+
+  {
+    "model": "settings.locations",
+    "pk": 1,
+    "fields": {
+      "name": "London"
+    }
+  },
+  {
+    "model": "settings.locations",
+    "pk": 2,
+    "fields": {
+      "name": "Dublin"
+    }
+  },
+  {
+    "model": "settings.locations",
+    "pk": 3,
+    "fields": {
+      "name": "New York"
+    }
+  },
+
+
+  {
+    "model": "settings.skills",
+    "pk": 1,
+    "fields": {
+      "name": "Financial Law"
+    }
+  },
+  {
+    "model": "settings.skills",
+    "pk": 2,
+    "fields": {
+      "name": "Corporate Law"
+    }
+  },
+  {
+    "model": "settings.skills",
+    "pk": 3,
+    "fields": {
+      "name": "Labour Law"
+    }
+  },
+  {
+    "model": "settings.skills",
+    "pk": 4,
+    "fields": {
+      "name": "Property Law"
+    }
+  },
+  {
+    "model": "settings.skills",
+    "pk": 5,
+    "fields": {
+      "name": "Intellectual Property Law"
+    }
+  }
+
+]
