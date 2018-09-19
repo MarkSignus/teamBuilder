@@ -3,12 +3,15 @@
 <!--tO LINK THEM TO NEW PAGES, ADD A HREF TO THE BUTTON-->
 <!--ACTIONS ARE ALL WRONG. NEED TO CHANGE AT A LATER DATE-->
   <div class="container-fluid" style="min-height:95%; ">
+     <h2>Settings</h2>
+    </br>
+
     <div class="row">
         <div class="col-sm-1">
           <br>
           <center>
-            <form action='/addUser/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Add Partner" />
+            <form action='partners/'>
+              <input type="submit" class="btn btn-outline-secondary" value="Partners" />
           </form>
           <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
           </center>
@@ -18,27 +21,49 @@
         <div class="col-sm-1">
           <br>
           <center>
-            <form action='/addProject/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Add Skill" />
+            <form action='clients/'>
+              <input type="submit" class="btn btn-outline-secondary" value="Clients" />
           </form>
           </center>
         </div>
     </div>
+
     <div class="row">
         <div class="col-sm-1">
           <br>
           <center>
-          <button type="button" class="btn btn-outline-secondary">Add Location</button>
+            <form action='skills/'>
+              <input type="submit" class="btn btn-outline-secondary" value="Associate skills" />
+          </form>
           </center>
         </div>
-      </div>
+    </div>
+
     <div class="row">
         <div class="col-sm-1">
           <br>
           <center>
-          <button type="button" class="btn btn-outline-secondary">Add Client</button>
+            <form action='locations/'>
+              <input type="submit" class="btn btn-outline-secondary" value="Locations" />
+          </form>
+          </center>
+        </div>
+    </div>
+
+
+</br>
+
+</br>
+    <div class="row">
+        <div class="col-sm-1">
+          <br>
+          <center>
+            <form action='/'>
+              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
+          </form>
           </center>
         </div>
     </div>
   </div>
+  </br>
 {% endblock %}

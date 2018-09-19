@@ -1,0 +1,183 @@
+[
+  {
+    "model": "associates.associate_table",
+    "pk": 6,
+    "fields": {
+      "name": "Mingy T",
+      "location": "2",
+      "rate": "100"
+    }
+  },
+
+  {
+    "model": "associates.associate_table",
+    "pk": 2,
+    "fields": {
+      "name": "Mark OShea",
+      "location": "3",
+      "rate": "105"
+    }
+  },  {
+    "model": "associates.associate_table",
+    "pk": 3,
+    "fields": {
+      "name": "Leem Marsh",
+      "location": "1",
+      "rate": "80"
+    }
+  },  {
+    "model": "associates.associate_table",
+    "pk": 4,
+    "fields": {
+      "name": "Stan Darsh",
+      "location": "2",
+      "rate": "190"
+    }
+  },  {
+    "model": "associates.associate_table",
+    "pk": 5,
+    "fields": {
+      "name": "Jacob Sssssol",
+      "location": "1",
+      "rate": "130"
+    }
+  },
+
+
+
+
+  {
+    "model": "associates.assoc_client_relationship",
+    "pk": 1,
+    "fields": {
+      "associate_id": "2",
+      "client_id": "2",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_client_relationship",
+    "pk": 2,
+    "fields": {
+      "associate_id": "2",
+      "client_id": "3",
+      "level": "5"
+    }
+  },  {
+    "model": "associates.assoc_client_relationship",
+    "pk": 3,
+    "fields": {
+      "associate_id": "1",
+      "client_id": "4",
+      "level": "2"
+    }
+  },  {
+    "model": "associates.assoc_client_relationship",
+    "pk": 4,
+    "fields": {
+      "associate_id": "3",
+      "client_id": "1",
+      "level": "3"
+    }
+  },  {
+    "model": "associates.assoc_client_relationship",
+    "pk": 5,
+    "fields": {
+      "associate_id": "4",
+      "client_id": "2",
+      "level": "3"
+    }
+  },
+
+
+
+  {
+    "model": "associates.assoc_skills",
+    "pk": 1,
+    "fields": {
+      "associate_id": "2",
+      "skill_id": "2",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_skills",
+    "pk": 2,
+    "fields": {
+      "associate_id": "2",
+      "skill_id": "3",
+      "level": "5"
+    }
+  },  {
+    "model": "associates.assoc_skills",
+    "pk": 3,
+    "fields": {
+      "associate_id": "1",
+      "skill_id": "4",
+      "level": "2"
+    }
+  },  {
+    "model": "associates.assoc_skills",
+    "pk": 4,
+    "fields": {
+      "associate_id": "3",
+      "skill_id": "1",
+      "level": "3"
+    }
+  },  {
+    "model": "associates.assoc_skills",
+    "pk": 5,
+    "fields": {
+      "associate_id": "4",
+      "skill_id": "2",
+      "level": "3"
+    }
+  },
+
+  {
+    "model": "associates.assoc_partner_relationship",
+    "pk": 1,
+    "fields": {
+      "associate_id": "2",
+      "partner_id": "2",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_partner_relationship",
+    "pk": 2,
+    "fields": {
+      "associate_id": "2",
+      "partner_id": "3",
+      "level": "5"
+    }
+  },  {
+    "model": "associates.assoc_partner_relationship",
+    "pk": 3,
+    "fields": {
+      "associate_id": "1",
+      "partner_id": "1",
+      "level": "2"
+    }
+  },  {
+    "model": "associates.assoc_partner_relationship",
+    "pk": 4,
+    "fields": {
+      "associate_id": "3",
+      "partner_id": "1",
+      "level": "3"
+    }
+  },  {
+    "model": "associates.assoc_partner_relationship",
+    "pk": 5,
+    "fields": {
+      "associate_id": "4",
+      "partner_id": "2",
+      "level": "3"
+    }
+  }
+
+]

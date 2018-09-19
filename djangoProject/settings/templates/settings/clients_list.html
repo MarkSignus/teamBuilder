@@ -1,0 +1,57 @@
+{% extends "homepage/header.html" %}
+
+{% block content %}
+
+<div class="col-sm-6">
+   <h2>New Clients:</h2>
+    </br>
+
+<form role="form" method="POST" action="" >
+<div class="form-group col-md-4">
+      {% csrf_token %}
+      {{ form }}
+      </br>
+      <input type="submit" value="Add" class="btn btn-outline-secondary">
+</div>
+</form>
+
+ </br>
+  </br>
+ </br>
+    <h2>Clients:</h2>
+    </br>
+    <table class="table table-striped table-bordered table-hover">
+  <thead  class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for client in object_list %}
+    <tr>
+      <th scope="row">{{ client.id }}</th>
+
+            <td>{{ client.name }}</td>
+
+    </tr>
+        {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+</br>
+    <div class="row">
+        <div class="col-sm-1">
+          <br>
+          <center>
+            <form action='/settings/'>
+              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
+          </form>
+          </center>
+        </div>
+    </div>
+  </div>
+  </br>
+{% endblock %}

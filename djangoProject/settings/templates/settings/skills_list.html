@@ -1,0 +1,56 @@
+{% extends "homepage/header.html" %}
+
+{% block content %}
+
+<div class="col-sm-6">
+   <h2>New Skills:</h2>
+    </br>
+
+<form role="form" method="POST" action="" class"" >
+<div class="form-group col-md-4">
+      {% csrf_token %}
+      {{ form }}
+      </br>
+      <input type="submit" value="Add" class="btn btn-outline-secondary">
+</div>
+</form>
+
+ </br>
+  </br>
+ </br>
+    <h2>Skills:</h2>
+    </br>
+    <table class="table table-striped table-bordered table-hover">
+  <thead  class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Skill</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for skill in object_list %}
+    <tr>
+      <th scope="row">{{ skill.id }}</th>
+
+            <td>{{ skill.name }}</td>
+
+    </tr>
+        {% endfor %}
+  </tbody>
+</table>
+</div>
+
+</br>
+    <div class="row">
+        <div class="col-sm-1">
+          <br>
+          <center>
+            <form action='/settings/'>
+              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
+          </form>
+          </center>
+        </div>
+    </div>
+  </div>
+  </br>
+{% endblock %}

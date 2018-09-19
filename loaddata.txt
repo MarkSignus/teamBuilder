@@ -13,5 +13,8 @@ python manage.py makemigrations
 python manage.py migrate
 
 Then populate the models with
-python manage.py loaddate "appname"/"filename".json
-e.g. python manage.py loaddata settings/load_settings_data.json
+python manage.py loaddata "appname"/"filename".json
+
+Current list of fixtures:
+python manage.py loaddata settings/load_settings_data.json
+python manage.py loaddata associates/load_associate_data.json
