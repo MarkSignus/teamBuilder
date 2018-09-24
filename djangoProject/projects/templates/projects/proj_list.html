@@ -44,12 +44,12 @@
             <td>{{ proj.fee }}</td>
             <td>{{ proj.duraton }}</td>
             <td>
-              <form action="{% url 'projects:proj_associates' proj.id %}" method="post">{% csrf_token %}
+              <form action="{% url 'proj_associates' proj.id %}" method="post">{% csrf_token %}
                 <input type="submit" class="btn btn-outline-secondary" value="View" />
               </form>
             </td> 
             <td>
-              <form action="{% url 'projects:proj_client' proj.id %}" method="post">{% csrf_token %}
+              <form action="{% url 'proj_client' proj.id %}" method="post">{% csrf_token %}
                 <input type="submit" class="btn btn-outline-secondary" value="Optimize" />
               </form>
             </td>   

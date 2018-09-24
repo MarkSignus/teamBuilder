@@ -37,7 +37,7 @@ class proj_client_relationship(models.Model):
         unique_together = (("project_id", "client_id"),)
         
     def __str__(self):
-        return self.project_id+'_'+str(self.client_id)   
+        return str(self.project_id)+'_'+str(self.client_id)   
     
     
 #PROJECTS TO SKILLS MATRIX
@@ -53,7 +53,7 @@ class proj_skills(models.Model):
         unique_together = (("project_id", "skill_id"),)
         
     def __str__(self):
-        return str(self.project_id+'_'+self.skill_id)
+        return str(self.project_id)+'_'+str(self.skill_id)
 
 #PROJECTS TO SKILLS MATRIX
 class proj_associates(models.Model):
@@ -67,7 +67,7 @@ class proj_associates(models.Model):
         unique_together = (("project_id", "associate_id"),)
         
     def __str__(self):
-        return self.project_id+'_'+str(self.associate_id)       
+        return str(self.project_id)+'_'+str(self.associate_id)       
     
 #PROJECTS  TO PARTNER MATRIX
 class proj_partner_relationship(models.Model):
@@ -82,4 +82,4 @@ class proj_partner_relationship(models.Model):
         unique_together = (("project_id", "partner_id"),)
         
     def __str__(self):
-        return self.project_id+'_'+str(self.partner_id)        
+        return str(self.project_id)+'_'+str(self.partner_id)        

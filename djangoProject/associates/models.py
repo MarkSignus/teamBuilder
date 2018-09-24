@@ -34,7 +34,7 @@ class assoc_client_relationship(models.Model):
         unique_together = (("associate_id", "client_id"),)
         
     def __str__(self):
-        return self.associate_id+'_'+str(self.client_id) 
+        return str(self.associate_id)+'_'+str(self.client_id) 
     
     
 #ASSOC TO SKILLS MATRIX
@@ -50,7 +50,7 @@ class assoc_skills(models.Model):
         unique_together = (("associate_id", "skill_id"),)
         
     def __str__(self):
-        return self.associate_id+'_'+str(self.skill_id)
+        return str(self.associate_id)+'_'+str(self.skill_id)
 
 #ASSOC TO SKILLS MATRIX
 class assoc_availability(models.Model):
@@ -65,7 +65,7 @@ class assoc_availability(models.Model):
         unique_together = (("associate_id", "week_id"),)
         
     def __str__(self):
-        return self.associate_id+'_'+str(self.week_id)       
+        return str(self.associate_id)+'_'+str(self.week_id)       
     
 #ASSOC TO PARTNER MATRIX
 class assoc_partner_relationship(models.Model):
@@ -80,4 +80,4 @@ class assoc_partner_relationship(models.Model):
         unique_together = (("associate_id", "partner_id"),)
         
     def __str__(self):
-        return self.associate_id+'_'+str(self.partner_id)     
+        return str(self.associate_id)+'_'+str(self.partner_id)     

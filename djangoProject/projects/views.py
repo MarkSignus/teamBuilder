@@ -12,6 +12,7 @@ from projects.models import proj_table, proj_partner_relationship, proj_client_r
 from projects.forms import projForm, proj_partnerForm, proj_clientForm, proj_skillForm, proj_assocForm
 
 
+
 class proj_skill_List(ListView):
     template_name ='projects/proj_skill.html'
     context_object_name = 'proj_skill'
@@ -47,9 +48,9 @@ class proj_skill_List(ListView):
             obj.minimum = form.cleaned_data['minimum']
             obj.isMin = form.cleaned_data['isMin']
             obj.save()
-            return HttpResponseRedirect('/project/proj_skill/'+str(q))
+            return HttpResponseRedirect('/projects/proj_skill/'+str(q))
         else:
-            return HttpResponseRedirect('/project/proj_skill/'+str(q))
+            return HttpResponseRedirect('/projects/proj_skill/'+str(q))
 
 
 
@@ -86,9 +87,9 @@ class proj_assoc_List(ListView):
             obj.project_id = form.cleaned_data['project_id']
             obj.associate_id = form.cleaned_data['associate_id']
             obj.save()
-            return HttpResponseRedirect('/project/proj_associates/'+str(q))
+            return HttpResponseRedirect('/projects/proj_associates/'+str(q))
         else:
-            return HttpResponseRedirect('/project/proj_associates/'+str(q))
+            return HttpResponseRedirect('/projects/proj_associates/'+str(q))
 
 
 
@@ -203,7 +204,7 @@ class ProjectListView(ListView):
         form = projForm(request.POST)
         if form.is_valid():
         # you should be able to extract inputs from the form here
-            obj=associate_table()
+            obj=proj_table()
             obj.name = form.cleaned_data['name']
             obj.location = form.cleaned_data['location']
             obj.duration = form.cleaned_data['duration']
