@@ -1,7 +1,7 @@
 [
   {
     "model": "associates.associate_table",
-    "pk": 6,
+    "pk": 1,
     "fields": {
       "name": "Mingy T",
       "location": "2",
@@ -177,6 +177,248 @@
       "associate_id": "4",
       "partner_id": "2",
       "level": "3"
+    }
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 1,
+    "fields": {
+      "associate_id": "1",
+      "week_id": "1",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 2,
+    "fields": {
+      "associate_id": "1",
+      "week_id": "2",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 3,
+    "fields": {
+      "associate_id": "1",
+      "week_id": "3",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 4,
+    "fields": {
+      "associate_id": "1",
+      "week_id": "4",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 5,
+    "fields": {
+      "associate_id": "1",
+      "week_id": "5",
+      "level": "1"
+    }
+  },
+
+
+
+
+
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 6,
+    "fields": {
+      "associate_id": "2",
+      "week_id": "1",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 7,
+    "fields": {
+      "associate_id": "2",
+      "week_id": "2",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 8,
+    "fields": {
+      "associate_id": "2",
+      "week_id": "3",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 9,
+    "fields": {
+      "associate_id": "2",
+      "week_id": "4",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 10,
+    "fields": {
+      "associate_id": "2",
+      "week_id": "5",
+      "level": "1"
+    }
+  },
+
+
+
+
+
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 11,
+    "fields": {
+      "associate_id": "3",
+      "week_id": "1",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 12,
+    "fields": {
+      "associate_id": "3",
+      "week_id": "2",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 13,
+    "fields": {
+      "associate_id": "3",
+      "week_id": "3",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 14,
+    "fields": {
+      "associate_id": "3",
+      "week_id": "4",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 15,
+    "fields": {
+      "associate_id": "3",
+      "week_id": "5",
+      "level": "1"
+    }
+  },
+
+
+
+    {
+    "model": "associates.assoc_availability",
+    "pk": 16,
+    "fields": {
+      "associate_id": "4",
+      "week_id": "1",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 17,
+    "fields": {
+      "associate_id": "4",
+      "week_id": "2",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 18,
+    "fields": {
+      "associate_id": "4",
+      "week_id": "3",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 19,
+    "fields": {
+      "associate_id": "4",
+      "week_id": "4",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 20,
+    "fields": {
+      "associate_id": "4",
+      "week_id": "5",
+      "level": "1"
+    }
+  },
+
+
+
+    {
+    "model": "associates.assoc_availability",
+    "pk": 21,
+    "fields": {
+      "associate_id": "5",
+      "week_id": "1",
+      "level": "1"
+    }
+  },
+
+  {
+    "model": "associates.assoc_availability",
+    "pk": 22,
+    "fields": {
+      "associate_id": "5",
+      "week_id": "2",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 23,
+    "fields": {
+      "associate_id": "5",
+      "week_id": "3",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 24,
+    "fields": {
+      "associate_id": "5",
+      "week_id": "4",
+      "level": "1"
+    }
+  },  {
+    "model": "associates.assoc_availability",
+    "pk": 25,
+    "fields": {
+      "associate_id": "5",
+      "week_id": "5",
+      "level": "1"
     }
   }
 

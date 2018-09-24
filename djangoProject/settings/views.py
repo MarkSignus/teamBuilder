@@ -11,34 +11,11 @@ def settings(request):
 from django.views.generic import ListView
 
 
-from settings.models import locations
-from settings.models import clients
-from settings.models import partners
-from settings.models import skills
+from settings.models import locations, clients, partners, skills, weeks
 
-from settings.forms import locationForm
-from settings.forms import partnerForm
-from settings.forms import clientForm
-from settings.forms import skillForm
+from settings.forms import locationForm, partnerForm, clientForm, skillForm, availForm
 
 
-#OUtdated...    
-class locationList(ListView):
-    model = locations
-    
-    
-class clientList(ListView):
-    model = clients
-    
-class partnerList(ListView):
-    model = partners
-    
-class skillList(ListView):
-    model = skills
-#OUtdated^^^^
-    
-    
-    
 
 
 class LocationListView(ListView):
@@ -174,4 +151,34 @@ class SkillListView(ListView):
         else:
             form = skillForm()
         
+class WeekListView(ListView):
+    template_name ='settings/weeks_list.html'
+    context_object_name = 'weeks'
+    model = weeks
+
+
     
+    def get(self, request, *args, **kwargs):
+        # From FormMixin
+
+        self.form = availForm()
+
+        # From ListView
+        self.object_list = self.get_queryset()
+
+
+
+        context = self.get_context_data(object_list=self.object_list, form=self.form)
+        return self.render_to_response(context)
+
+    def post(self, request):
+        
+        form = availForm(request.POST)
+        if form.is_valid():
+        # you should be able to extract inputs from the form here
+            obj=weeks()
+            obj.number = form.cleaned_data['number']
+            obj.save()
+            return HttpResponseRedirect('/settings/weeks/')
+        else:
+            form = availForm()  

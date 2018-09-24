@@ -171,6 +171,13 @@
       "name": "Oil Co"
     }
   },
+    {
+    "model": "settings.clients",
+    "pk": 4,
+    "fields": {
+      "name": "Tech Co"
+    }
+  },
 
 
 
@@ -230,6 +237,82 @@
     "pk": 5,
     "fields": {
       "name": "Intellectual Property Law"
+    }
+  },
+
+
+
+
+  {
+    "model": "settings.weeks",
+    "pk": 1,
+    "fields": {
+      "number": "1"
+    }
+  },
+  {
+    "model": "settings.weeks",
+    "pk": 2,
+    "fields": {
+      "number": "2"
+    }
+  },
+  {
+    "model": "settings.weeks",
+    "pk": 3,
+    "fields": {
+      "number": "3"
+    }
+  },
+  {
+    "model": "settings.weeks",
+    "pk": 4,
+    "fields": {
+      "number": "4"
+    }
+  },
+  {
+    "model": "settings.weeks",
+    "pk": 5,
+    "fields": {
+      "number": "5"
+    }
+  },
+
+
+  {
+    "model": "settings.availability_levels",
+    "pk": 1,
+    "fields": {
+      "value": "1"
+    }
+  },
+  {
+    "model": "settings.availability_levels",
+    "pk": 2,
+    "fields": {
+      "value": "2"
+    }
+  },
+  {
+    "model": "settings.availability_levels",
+    "pk": 3,
+    "fields": {
+      "value": "3"
+    }
+  },
+  {
+    "model": "settings.availability_levels",
+    "pk": 4,
+    "fields": {
+      "value": "4"
+    }
+  },
+  {
+    "model": "settings.availability_levels",
+    "pk": 5,
+    "fields": {
+      "value": "5"
     }
   }
 

@@ -3,32 +3,38 @@
 {% block content %}
 
 <div class="col-sm-12">
-   <h2>Add Client Relationship for {{ modelone.name }}:</h2>
+   <h2>Input Clients for {{ modelone.name }}:</h2>
     </br>
 
-<form role="form" method="POST" action="" >
+<form role="form" method="POST" action=""  >
 <div class="form-group col-md-4">
       {% csrf_token %}
     
-    <input type="hidden" name="associate_id" value="{{modelone.id}}">
+    <input type="hidden" name="project_id" value="{{modelone.id}}">
 
     {{ form.client_id.errors }}
         <label for="{{ form.client_id.id_for_label }}">Client:</label>
     {{ form.client_id }}
 
     <br>
-    {{ form.level.errors }}
-        <label for="{{ form.level.id_for_label }}">Level:</label>
-    {{ form.level }}
+    {{ form.minimum.errors }}
+        <label for="{{ form.minimum.id_for_label }}">Min Level:</label>
+    {{ form.minimum }}
+
+    <br>
+    {{ form.isMin.errors }}
+        <label for="{{ form.isMin.id_for_label }}">Minimise:</label>
+    {{ form.isMin }}
       </br>
       <input type="submit" value="Add" class="btn btn-outline-secondary">
 </div>
 </form>
 
+
  </br>
   </br>
  </br>
-    <h2>{{ modelone.name }}'s Client Relationships:</h2>
+    <h2>{{ modelone.name }}'s Client:</h2>
     </br>
     <div class="table-responsive">
 
@@ -36,7 +42,8 @@
       <thead  class="thead-dark">
         <tr>
           <th scope="col">Client</th>
-          <th scope="col">Level</th>
+          <th scope="col">Min Level</th>
+          <th scope="col">Minimise</th>
         </tr>
       </thead>
       <tbody>
@@ -45,14 +52,20 @@
         <tr>
 
                 <td>{{ client.client_id }}</td>
-                <td>{{ client.level }}</td>
-
+                <td>{{ client.minimum }}</td>
+                <td>{{ client.isMin }}</td>
         </tr>
 
             {% endfor %}
       </tbody>
     </table>
     </div>
+      </br>
+            </br>
+     <form action="{% url 'proj_partner' modelone.id %}" method="post">{% csrf_token %}
+                <input type="submit" class="btn btn-outline-secondary" value="Next" />
+     </form>
+
 </div>
 
 
@@ -61,7 +74,7 @@
         <div class="col-sm-1">
           <br>
           <center>
-            <form action='/associates/'>
+            <form action='/projects/'>
               <input type="submit" class="btn btn-outline-tertiary" value="Return" />
           </form>
           </center>

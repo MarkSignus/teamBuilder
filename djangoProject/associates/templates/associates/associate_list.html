@@ -27,6 +27,7 @@
       <th scope="col">Name</th>
       <th scope="col">Location</th>
       <th scope="col">Rate</th>
+      <th scope="col">Availability</th>
       <th scope="col">Clients</th>
       <th scope="col">Partners</th>
       <th scope="col">Skills</th>
@@ -40,21 +41,29 @@
             <td>{{ assoc.name }}</td>
             <td>{{ assoc.location }}</td>
             <td>{{ assoc.rate }}</td>
-            <td>    
-              <form action='assoc_client/'>
+
+            <td>
+              <form action="{% url 'assoc_availability' assoc.id %}" method="post">{% csrf_token %}
+                <input type="submit" class="btn btn-outline-secondary" value="View" />
+              </form>
+            </td>
+            <td>  
+              <form action="{% url 'assoc_client' assoc.id %}" method="post">{% csrf_token %}
                 <input type="submit" class="btn btn-outline-secondary" value="View" />
               </form>
             </td>
              <td>    
-              <form action='assoc_partner/'>
+              <form action="{% url 'assoc_partner' assoc.id %}" method="post">{% csrf_token %}
                 <input type="submit" class="btn btn-outline-secondary" value="View" />
               </form>
             </td>       
             <td>    
-              <form action='assoc_skill/'>
+
+              <form action="{% url 'assoc_skill' assoc.id %}" method="post">{% csrf_token %}
                 <input type="submit" class="btn btn-outline-secondary" value="View" />
               </form>
             </td>
+
 
     </tr>
         {% endfor %}

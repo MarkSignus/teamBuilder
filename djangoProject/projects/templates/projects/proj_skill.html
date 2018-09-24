@@ -3,23 +3,28 @@
 {% block content %}
 
 <div class="col-sm-12">
-   <h2>Add skill for {{ modelone.name }}:</h2>
+   <h2>Input Skills for {{ modelone.name }}:</h2>
     </br>
 
-<form role="form" method="POST" action="" >
+<form role="form" method="POST" action="">
 <div class="form-group col-md-4">
       {% csrf_token %}
     
-    <input type="hidden" name="associate_id" value="{{modelone.id}}">
+    <input type="hidden" name="project_id" value="{{modelone.id}}">
 
     {{ form.skill_id.errors }}
-        <label for="{{ form.skill_id.id_for_label }}">Skill:</label>
+        <label for="{{ form.skill_id.id_for_label }}">Partner:</label>
     {{ form.skill_id }}
 
     <br>
-    {{ form.level.errors }}
-        <label for="{{ form.level.id_for_label }}">Level:</label>
-    {{ form.level }}
+    {{ form.minimum.errors }}
+        <label for="{{ form.minimum.id_for_label }}">Min Level:</label>
+    {{ form.minimum }}
+
+    <br>
+    {{ form.isMin.errors }}
+        <label for="{{ form.isMin.id_for_label }}">Minimise:</label>
+    {{ form.isMin }}
       </br>
       <input type="submit" value="Add" class="btn btn-outline-secondary">
 </div>
@@ -36,7 +41,8 @@
       <thead  class="thead-dark">
         <tr>
           <th scope="col">Skill</th>
-          <th scope="col">Level</th>
+          <th scope="col">Min Level</th>
+          <th scope="col">Minimise</th>
         </tr>
       </thead>
       <tbody>
@@ -45,14 +51,21 @@
         <tr>
 
                 <td>{{ skill.skill_id }}</td>
-                <td>{{ skill.level }}</td>
-
+                <td>{{ skill.minimum }}</td>
+                <td>{{ skill.isMin }}</td>
         </tr>
 
             {% endfor %}
       </tbody>
     </table>
     </div>
+      </br>
+            </br>
+     <form action="{% url 'proj_associates' modelone.id %}" method="post">{% csrf_token %}
+                <input type="submit" class="btn btn-outline-secondary" value="Next" />
+     </form>
+
+
 </div>
 
 
@@ -61,7 +74,7 @@
         <div class="col-sm-1">
           <br>
           <center>
-            <form action='/associates/'>
+            <form action='/projects/'>
               <input type="submit" class="btn btn-outline-tertiary" value="Return" />
           </form>
           </center>

@@ -1,5 +1,5 @@
 from django.db import models, migrations
-from settings.models import locations,clients,client_levels, skills, skill_levels, partners, partner_levels
+from settings.models import locations,clients,client_levels, skills, skill_levels, partners, partner_levels, weeks, availability_levels
 
 # Create your models here.
 
@@ -16,7 +16,7 @@ class associate_table(models.Model):
         verbose_name_plural = "associate_table"
         
     def __str__(self):
-        return self.name
+        return self.name+'_'+str(self.id)
 
     
 
@@ -34,7 +34,7 @@ class assoc_client_relationship(models.Model):
         unique_together = (("associate_id", "client_id"),)
         
     def __str__(self):
-        return str(self.associate_id)    
+        return self.associate_id+'_'+str(self.client_id) 
     
     
 #ASSOC TO SKILLS MATRIX
@@ -50,7 +50,22 @@ class assoc_skills(models.Model):
         unique_together = (("associate_id", "skill_id"),)
         
     def __str__(self):
-        return str(self.associate_id)    
+        return self.associate_id+'_'+str(self.skill_id)
+
+#ASSOC TO SKILLS MATRIX
+class assoc_availability(models.Model):
+        
+    associate_id = models.ForeignKey('associate_table', on_delete=models.PROTECT)
+    week_id = models.ForeignKey(weeks, on_delete=models.PROTECT)
+    level=models.ForeignKey(availability_levels, on_delete=models.PROTECT)
+    
+ 
+    class Meta:
+        verbose_name_plural = "assoc_availabilities"
+        unique_together = (("associate_id", "week_id"),)
+        
+    def __str__(self):
+        return self.associate_id+'_'+str(self.week_id)       
     
 #ASSOC TO PARTNER MATRIX
 class assoc_partner_relationship(models.Model):
@@ -65,4 +80,4 @@ class assoc_partner_relationship(models.Model):
         unique_together = (("associate_id", "partner_id"),)
         
     def __str__(self):
-        return str(self.associate_id)        
+        return self.associate_id+'_'+str(self.partner_id)     

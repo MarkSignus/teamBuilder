@@ -13,7 +13,8 @@ class locations(models.Model):
         verbose_name_plural = "locations"
         
     def __str__(self):
-        return self.name
+        return (self.name)
+
 
     
 #CLIENTS
@@ -26,7 +27,8 @@ class clients(models.Model):
         verbose_name_plural = "clients"
         
     def __str__(self):
-        return self.name
+        return (self.name+'_'+str(self.id))
+
     
 #PARTNERS  
 class partners(models.Model):
@@ -38,7 +40,8 @@ class partners(models.Model):
         verbose_name_plural = "partners"
         
     def __str__(self):
-        return self.name
+        return (self.name+'_'+str(self.id))
+
     
     
 #SKILLS  
@@ -51,6 +54,29 @@ class skills(models.Model):
         
     def __str__(self):
         return self.name
+    
+#WEEKS  
+class weeks(models.Model):
+        
+    number = models.IntegerField(blank=False,null=False)
+    
+    class Meta:
+        verbose_name_plural = "weeks"
+        
+    def __str__(self):
+        return str(self.number)
+    
+ #AVAILABILITY LEVELS
+class availability_levels(models.Model):
+
+    value = models.IntegerField(blank=False,null=False)
+    
+    class Meta:
+        verbose_name_plural = "availability_levels"
+        
+    def __str__(self):
+        return str(self.value)
+    
 
 #SKILL LEVELS
 class skill_levels(models.Model):

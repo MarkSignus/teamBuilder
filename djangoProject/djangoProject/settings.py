@@ -33,9 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'homepage',
     'associates',
-    'addProject',
+    'projects',
     'settings',
-    'reset_migrations',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

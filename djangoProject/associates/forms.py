@@ -1,6 +1,6 @@
 from django import forms
-from associates.models import associate_table, assoc_partner_relationship,assoc_client_relationship,assoc_skills
-from settings.models import locations,clients,client_levels, skills, skill_levels, partners, partner_levels
+from associates.models import associate_table, assoc_partner_relationship,assoc_client_relationship,assoc_skills,assoc_availability
+from settings.models import locations,clients,client_levels, skills, skill_levels, partners, partner_levels,weeks, availability_levels
 
 
 class associateForm(forms.ModelForm):
@@ -11,6 +11,16 @@ class associateForm(forms.ModelForm):
     class Meta:
         model = associate_table
         fields = '__all__' 
+        
+class assoc_availForm(forms.ModelForm):
+
+    associate_id = forms.ModelChoiceField(label='Associate',queryset=associate_table.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
+    week_id = forms.ModelChoiceField(label='Week',queryset=weeks.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
+    level = forms.ModelChoiceField(label='Level',queryset=availability_levels.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
+
+    class Meta:
+        model = assoc_availability
+        fields = '__all__'
         
 
 class assoc_partnerForm(forms.ModelForm):

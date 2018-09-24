@@ -1,8 +1,5 @@
 from django import forms
-from settings.models import locations
-from settings.models import partners
-from settings.models import clients
-from settings.models import skills
+from settings.models import locations, partners, clients, skills, weeks
 
 
 class locationForm(forms.ModelForm):
@@ -38,3 +35,11 @@ class skillForm(forms.ModelForm):
     class Meta:
         model = skills
         fields = ('name',)
+        
+class availForm(forms.ModelForm):
+
+    number = forms.IntegerField(label='Week name',widget=forms.TextInput(attrs={'class' : 'form-control'}))
+
+    class Meta:
+        model = weeks
+        fields = ('number',)

@@ -1,11 +1,5 @@
 from django.contrib import admin
-from settings.models import skill_levels
-from settings.models import partner_levels
-from settings.models import client_levels
-from settings.models import locations
-from settings.models import skills
-from settings.models import clients
-from settings.models import partners
+from settings.models import skill_levels, partner_levels, client_levels, locations, skills, clients, partners, weeks, availability_levels
 # Register your models here.
 
 
@@ -16,3 +10,5 @@ admin.site.register(locations)
 admin.site.register(skills)
 admin.site.register(clients)
 admin.site.register(partners)
+admin.site.register(weeks)
+admin.site.register(availability_levels)

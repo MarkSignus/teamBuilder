@@ -18,3 +18,12 @@ python manage.py loaddata "appname"/"filename".json
 Current list of fixtures:
 python manage.py loaddata settings/load_settings_data.json
 python manage.py loaddata associates/load_associate_data.json
+
+
+
+
+
+
+
+TO RESET:
+python manage.py flush 
