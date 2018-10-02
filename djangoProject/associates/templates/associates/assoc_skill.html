@@ -2,71 +2,99 @@
 
 {% block content %}
 
-<div class="col-sm-12">
-   <h2>Add skill for {{ modelone.name }}:</h2>
-    </br>
-
-<form role="form" method="POST" action="" >
-<div class="form-group col-md-4">
-      {% csrf_token %}
-    
-    <input type="hidden" name="associate_id" value="{{modelone.id}}">
-
-    {{ form.skill_id.errors }}
-        <label for="{{ form.skill_id.id_for_label }}">Skill:</label>
-    {{ form.skill_id }}
-
+<div class='container'>
     <br>
-    {{ form.level.errors }}
-        <label for="{{ form.level.id_for_label }}">Level:</label>
-    {{ form.level }}
-      </br>
-      <input type="submit" value="Add" class="btn btn-outline-secondary">
-</div>
-</form>
-
- </br>
-  </br>
- </br>
-    <h2>{{ modelone.name }}'s Skills:</h2>
-    </br>
-    <div class="table-responsive">
-
-    <table class="table table-striped table-bordered table-hover">
-      <thead  class="thead-dark">
-        <tr>
-          <th scope="col">Skill</th>
-          <th scope="col">Level</th>
-        </tr>
-      </thead>
-      <tbody>
-      {% for skill in object_list %}
-
-        <tr>
-
-                <td>{{ skill.skill_id }}</td>
-                <td>{{ skill.level }}</td>
-
-        </tr>
-
-            {% endfor %}
-      </tbody>
-    </table>
-    </div>
-</div>
-
-
-</br>
+    <br>
+    <br>
+    <div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<center>
+								<h1>{{ modelone.name }}</h1>
+								<!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
+						</center>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="row">
         <div class="col-sm-1">
-          <br>
+        </div>
+        <div class="col-sm-3">
           <center>
-            <form action='/associates/'>
-              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
-          </form>
+              <h2>Add New Skill</h2>
+              <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
           </center>
+          <br>
+          <br>
+          <form role="form" method="POST" action="" class"" >
+          <!--<div class="form-group col-md-4">-->
+              {% csrf_token %}
+              <input type="hidden" name="associate_id" value="{{modelone.id}}">
+              {{ form.skill_id.errors }}
+              <label for="{{ form.skill_id.id_for_label }}">Skill:</label>
+              {{ form.skill_id }}
+              <br>
+              {{ form.level.errors }}
+              <label for="{{ form.level.id_for_label }}">Level of Expertise:</label>
+              {{ form.level }}
+              <small>(1 → novice; 5 → expert)</small>
+              <br>
+              <br>
+              <input type="submit" value="Add" class="btn btn-dark btn-lg btn-block">
+          <!--</div>-->
+          </form>
+        </div>
+        <div class='col-sm-2'>
+        </div>
+        <div class="col-sm-5">
+          <center>
+            <h2>{{ modelone.name }}'s Skills</h2>
+          </center>
+          <br>
+          <br>
+          <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                  <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Level of Expertise</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {% for skill in object_list %}
+                      <tr>
+                        <td>{{ skill.skill_id }}</td>
+                        <td>{{ skill.level }}</td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="col-sm-1">
         </div>
     </div>
-  </div>
-  </br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-3">
+            <form action='/associates/'>
+                <input type="submit" class="btn btn-dark btn-lg btn-block" value="Back to Associates" />
+            </form>
+        </div>
+        <div class="col-sm-9">
+        </div>
+    </div>
+</div>
 {% endblock %}

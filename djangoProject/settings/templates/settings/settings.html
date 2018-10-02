@@ -2,78 +2,89 @@
 {% block content %}
 <!--tO LINK THEM TO NEW PAGES, ADD A HREF TO THE BUTTON-->
 <!--ACTIONS ARE ALL WRONG. NEED TO CHANGE AT A LATER DATE-->
-  <div class="container-fluid" style="min-height:95%; ">
-     <h2>Settings</h2>
-    </br>
-
+<div class='container'>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='partners/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Partners" />
-          </form>
-          <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
-          </center>
+        <div class="col-sm-3">
         </div>
-      </div>
-    <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='clients/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Clients" />
-          </form>
-          </center>
+        <div class="col-sm-6">
+            <center>
+                <h1>Settings</h1>
+                <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
+            </center>
+        </div>
+        <div class="col-sm-3">
         </div>
     </div>
-
+    <br>
+    <br>
+    <br>
     <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='skills/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Associate skills" />
-          </form>
-          </center>
-        </div>
-    </div>
-
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='partners/'>
+								<button type="button" class="btn btn-dark btn-lg btn-block">Partners</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='clients/'>
+							<button type="button" class="btn btn-dark btn-lg btn-block">Clients</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='skills/'>
+							<button type="button" class="btn btn-dark btn-lg btn-block">Employee Skills</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+    <br>
+    <br>
     <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='locations/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Locations" />
-          </form>
-          </center>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='weeks/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Calender Weeks" />
-          </form>
-          </center>
-        </div>
-    </div>
-
-
-</br>
-
-</br>
-    <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='/'>
-              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
-          </form>
-          </center>
-        </div>
-    </div>
-  </div>
-  </br>
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='locations/'>
+								<button type="button" class="btn btn-dark btn-lg btn-block">Office Locations</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='weeks/'>
+							<button type="button" class="btn btn-dark btn-lg btn-block">Calendar Weeks</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+</div>
 {% endblock %}

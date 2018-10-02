@@ -2,71 +2,101 @@
 
 {% block content %}
 
-<div class="col-sm-12">
-   <h2>Input Availability for {{ modelone.name }}:</h2>
-    </br>
-
-<form role="form" method="POST" action="" >
-<div class="form-group col-md-4">
-      {% csrf_token %}
-    
-    <input type="hidden" name="associate_id" value="{{modelone.id}}">
-
-    {{ form.week_id.errors }}
-        <label for="{{ form.week_id.id_for_label }}">Week:</label>
-    {{ form.week_id }}
-
+<div class='container'>
     <br>
-    {{ form.level.errors }}
-        <label for="{{ form.level.id_for_label }}">Level:</label>
-    {{ form.level }}
-      </br>
-      <input type="submit" value="Add" class="btn btn-outline-secondary">
-</div>
-</form>
-
- </br>
-  </br>
- </br>
-    <h2>{{ modelone.name }}'s Availability:</h2>
-    </br>
-    <div class="table-responsive"> 
-
-    <table class="table table-striped table-bordered table-hover">
-      <thead  class="thead-dark">
-        <tr>
-          <th scope="col">Week</th>
-          <th scope="col">Level</th>
-        </tr>
-      </thead>
-      <tbody>
-      {% for week in object_list %}
-
-        <tr>
-
-                <td>{{ week.week_id }}</td>
-                <td>{{ week.level }}</td>
-
-        </tr>
-
-            {% endfor %}
-      </tbody>
-    </table>
-    </div>
-</div>
-
-
-</br>
+    <br>
+    <br>
+    <div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<center>
+								<h1>{{ modelone.name }}</h1>
+								<!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
+						</center>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="row">
         <div class="col-sm-1">
-          <br>
+        </div>
+        <div class="col-sm-3">
+            <center>
+                <h2>Add New</h2>
+                <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
+            </center>
+            <br>
+            <br>
+            <form role="form" method="POST" action="" class"" >
+                <!--<div class="form-group col-md-4">-->
+                {% csrf_token %}
+                <input type="hidden" name="associate_id" value="{{modelone.id}}">
+                {{ form.week_id.errors }}
+                <label for="{{ form.week_id.id_for_label }}">Week:</label>
+                {{ form.week_id }}
+                <br>
+                {{ form.level.errors }}
+                <label for="{{ form.level.id_for_label }}">Current Workload:</label>
+                {{ form.level }}
+                <small>(1 → free; 5 → overloaded)</small>
+                <br>
+                <br>
+                <input type="submit" value="Add" class="btn btn-dark btn-lg btn-block">
+            <!--</div>-->
+            </form>
+        </div>
+        <div class='col-sm-2'>
+        </div>
+        <div class="col-sm-5">
           <center>
-            <form action='/associates/'>
-              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
-          </form>
+            <h2>{{ modelone.name }}'s Availability</h2>
           </center>
+          <br>
+          <br>
+          <div class="table-responsive">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Week</th>
+                          <th scope="col">Current Workload</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for week in object_list %}
+                        <tr>
+                          <td>{{ week.week_id }}</td>
+                          <td>{{ week.level }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1">
         </div>
     </div>
-  </div>
-  </br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-3">
+            <form action='/associates/'>
+                <input type="submit" class="btn btn-dark btn-lg btn-block" value="Back to Associates" />
+            </form>
+        </div>
+        <div class="col-sm-9">
+        </div>
+    </div>
+</div>
 {% endblock %}

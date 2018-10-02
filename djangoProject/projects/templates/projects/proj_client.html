@@ -2,84 +2,82 @@
 
 {% block content %}
 
-<div class="col-sm-12">
-   <h2>Input Clients for {{ modelone.name }}:</h2>
-    </br>
-
-<form role="form" method="POST" action=""  >
-<div class="form-group col-md-4">
-      {% csrf_token %}
-    
-    <input type="hidden" name="project_id" value="{{modelone.id}}">
-
-    {{ form.client_id.errors }}
-        <label for="{{ form.client_id.id_for_label }}">Client:</label>
-    {{ form.client_id }}
-
+<div class='container'>
     <br>
-    {{ form.minimum.errors }}
-        <label for="{{ form.minimum.id_for_label }}">Min Level:</label>
-    {{ form.minimum }}
-
     <br>
-    {{ form.isMin.errors }}
-        <label for="{{ form.isMin.id_for_label }}">Minimise:</label>
-    {{ form.isMin }}
-      </br>
-      <input type="submit" value="Add" class="btn btn-outline-secondary">
-</div>
-</form>
-
-
- </br>
-  </br>
- </br>
-    <h2>{{ modelone.name }}'s Client:</h2>
-    </br>
-    <div class="table-responsive">
-
-    <table class="table table-striped table-bordered table-hover">
-      <thead  class="thead-dark">
-        <tr>
-          <th scope="col">Client</th>
-          <th scope="col">Min Level</th>
-          <th scope="col">Minimise</th>
-        </tr>
-      </thead>
-      <tbody>
-      {% for client in object_list %}
-
-        <tr>
-
-                <td>{{ client.client_id }}</td>
-                <td>{{ client.minimum }}</td>
-                <td>{{ client.isMin }}</td>
-        </tr>
-
-            {% endfor %}
-      </tbody>
-    </table>
-    </div>
-      </br>
-            </br>
-     <form action="{% url 'proj_partner' modelone.id %}" method="post">{% csrf_token %}
-                <input type="submit" class="btn btn-outline-secondary" value="Next" />
-     </form>
-
-</div>
-
-
-</br>
+    <br>
+    <br>
+    <br>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-sm-4">
+          <h2>Client Preferences</h2>
           <br>
-          <center>
-            <form action='/projects/'>
-              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
-          </form>
-          </center>
+          <br>
+          <form role="form" method="POST" action=""  >
+          <!--<div class="form-group col-md-4">-->
+                {% csrf_token %}
+                <input type="hidden" name="project_id" value="{{modelone.id}}">
+                {{ form.client_id.errors }}
+                <label for="{{ form.client_id.id_for_label }}">Client:</label>
+                {{ form.client_id }}
+                <br>
+                {{ form.minimum.errors }}
+                <label for="{{ form.minimum.id_for_label }}">Pre-existing Relationship:</label>
+                {{ form.minimum }}
+                <small>(1 → none; 5 → first-name basis)</small>
+                <br>
+                <br>
+                {{ form.isMin.errors }}
+                <label for="{{ form.isMin.id_for_label }}">Emphasis:</label>
+                {{ form.isMin }}
+                <br>
+                <br>
+                <input type="submit" value="Add" class="btn btn-dark btn-lg btn-block">
+        </form>
+        </div>
+        <div class='col-sm-1'>
+        </div>
+        <div class="col-sm-7">
+          <h2>{{ modelone.name }}'s Client(s):</h2>
+          <br>
+          <br>
+          <table class="table table-bordered table-hover">
+              <thead  class="thead-dark">
+                  <tr>
+                    <th scope="col">Client</th>
+                    <th scope="col">Pre-existing Relationship</th>
+                    <th scope="col">Emphasis</th>
+                  </tr>
+              </thead>
+              <tbody>
+                {% for client in object_list %}
+                  <tr>
+                    <td>{{ client.client_id }}</td>
+                    <td>{{ client.minimum }}</td>
+                    <td>{{ client.isMin }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+          </table>
         </div>
     </div>
-  </div>
-  </br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <a href='/projects/'>
+          <button type="button" class="btn btn-dark btn-lg btn-block">Return to Build Team</button>
+        </a>
+      </div>
+        <div class='col-sm-6'>
+            <form action="{% url 'proj_partner' modelone.id %}" method="post">{% csrf_token %}
+                <input type="submit" class="btn btn-dark btn-lg btn-block"
+                value="Advance to Partner Preferences" />
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

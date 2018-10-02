@@ -1,44 +1,69 @@
 {% extends "homepage/header.html" %}
 {% block content %}
-<h2>TeamBuilder</h2>
 
 
 <!--EACH BUTTON BOLLOW IS CONTAINED IN A DIV. THESE DIVS ARE IN TWO ROWS AND TWO COLUMNS-->
 <!--LIAM: I changed it so that they each appear on a new row, when in two columns they squashed together when you made the screen smaller -->
 
 <!--tO LINK THEM TO NEW PAGES, ADD A HREF TO THE BUTTON-->
-	<div class="container-fluid" style="min-height:95%; ">
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		<div class="row">
-			  <div class="col-sm-1">
-				  <br>
-				  <center>
-				  	<form action='/associates/'>
-					    <input type="submit" class="btn btn-outline-secondary" value="Associates" />
-					</form>
-					<!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
-				  </center>
-			  </div>
-	    </div>
-		<div class="row">
-			  <div class="col-sm-1">
-				  <br>
-				  <center>
-				  	<form action='/projects/'>
-					    <input type="submit" class="btn btn-outline-secondary" value="Projects" />
-					</form>
-				  </center>
-			  </div>
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<center>
+								<h1>TeamBuilder</h1>
+								<!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
+						</center>
+				</div>
+				<div class="col-sm-3">
+				</div>
 		</div>
+		<br>
+		<br>
+		<br>
+		<br>
 		<div class="row">
-			  <div class="col-sm-1">
-				  <br>
-				  <center>
-			  	    <form action='/settings/'>
-					    <input type="submit" class="btn btn-outline-secondary" value="Settings" />
-					</form>
-				  </center>
-			  </div>
-	    </div>
-
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='/associates/' class='nounderline'>
+								<button type="button" class="btn btn-dark btn-lg btn-block">Add/Edit Associate</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='/projects/'>
+							<button type="button" class="btn btn-dark btn-lg btn-block">Build Team</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-6">
+						<a href='/settings/'>
+							<button type="button" class="btn btn-dark btn-lg btn-block">Settings</button>
+						</a>
+				</div>
+				<div class="col-sm-3">
+				</div>
+		</div>
 	</div>
 {% endblock %}

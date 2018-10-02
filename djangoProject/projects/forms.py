@@ -4,22 +4,44 @@ from settings.models import locations,clients,client_levels, skills, skill_level
 from associates.models import associate_table
 
 TRUE_FALSE_CHOICES = (
-    (True, 'Yes'),
-    (False, 'No')
+    (True, 'Foster Development'),
+    (False, 'Prefer Experience')
 )
 
 
 
 class projForm(forms.ModelForm):
-    name=forms.CharField(label='Name',max_length=50,widget=forms.TextInput(attrs={'class' : 'form-control'}))
-    duration=forms.IntegerField(label='Duration',widget=forms.NumberInput(attrs={'class' : 'form-control'}))
+    name=forms.CharField(
+        label='Name',
+        max_length=50,
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Enter project name..'
+            }
+        ))
+    duration=forms.IntegerField(
+        label='Duration',
+        widget=forms.NumberInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Enter project duration (# of weeks)..'
+            }
+        ))
     location = forms.ModelChoiceField(label='Location',queryset=locations.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
-    fee=forms.IntegerField(label='Fee',widget=forms.NumberInput(attrs={'class' : 'form-control'}))
-    
+    fee=forms.IntegerField(
+        label='Fee',
+        widget=forms.NumberInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Enter the fee in GBP (thousands)'
+            }
+        ))
+
     class Meta:
         model = proj_table
-        fields = '__all__' 
-        
+        fields = '__all__'
+
 class proj_assocForm(forms.ModelForm):
 
     associate_id = forms.ModelChoiceField(label='Associate',queryset=associate_table.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
@@ -28,7 +50,7 @@ class proj_assocForm(forms.ModelForm):
     class Meta:
         model = proj_associates
         fields = '__all__'
-        
+
 
 class proj_partnerForm(forms.ModelForm):
 
@@ -48,7 +70,7 @@ class proj_clientForm(forms.ModelForm):
     client_id = forms.ModelChoiceField(label='Client',queryset=clients.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
     minimum = forms.ModelChoiceField(label='Min Level',queryset=client_levels.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
     isMin = forms.ChoiceField(label='Minimise',choices = TRUE_FALSE_CHOICES, widget=forms.Select(attrs={'class' : 'form-control'}))
-    
+
     class Meta:
         model = proj_client_relationship
         fields = '__all__'
@@ -64,6 +86,3 @@ class proj_skillForm(forms.ModelForm):
     class Meta:
         model = proj_skills
         fields = '__all__'
-
-
-        

@@ -2,84 +2,90 @@
 
 {% block content %}
 
-<div class="col-sm-12">
-   <h2>Input Skills for {{ modelone.name }}:</h2>
-    </br>
-
-<form role="form" method="POST" action="">
-<div class="form-group col-md-4">
-      {% csrf_token %}
-    
-    <input type="hidden" name="project_id" value="{{modelone.id}}">
-
-    {{ form.skill_id.errors }}
-        <label for="{{ form.skill_id.id_for_label }}">Skill:</label>
-    {{ form.skill_id }}
-
+<div class='container'>
     <br>
-    {{ form.minimum.errors }}
-        <label for="{{ form.minimum.id_for_label }}">Min Level:</label>
-    {{ form.minimum }}
-
     <br>
-    {{ form.isMin.errors }}
-        <label for="{{ form.isMin.id_for_label }}">Minimise:</label>
-    {{ form.isMin }}
-      </br>
-      <input type="submit" value="Add" class="btn btn-outline-secondary">
-</div>
-</form>
-
- </br>
-  </br>
- </br>
-    <h2>{{ modelone.name }}'s Skills:</h2>
-    </br>
-    <div class="table-responsive">
-
-    <table class="table table-striped table-bordered table-hover">
-      <thead  class="thead-dark">
-        <tr>
-          <th scope="col">Skill</th>
-          <th scope="col">Min Level</th>
-          <th scope="col">Minimise</th>
-        </tr>
-      </thead>
-      <tbody>
-      {% for skill in object_list %}
-
-        <tr>
-
-                <td>{{ skill.skill_id }}</td>
-                <td>{{ skill.minimum }}</td>
-                <td>{{ skill.isMin }}</td>
-        </tr>
-
-            {% endfor %}
-      </tbody>
-    </table>
-    </div>
-      </br>
-            </br>
-     <form action="{% url 'proj_associates' modelone.id %}" method="post">{% csrf_token %}
-                <input type="submit" class="btn btn-outline-secondary" value="Next" />
-     </form>
-
-
-</div>
-
-
-</br>
+    <br>
+    <br>
+    <br>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-sm-4">
+          <h2>Skill Preferences</h2>
           <br>
-          <center>
-            <form action='/projects/'>
-              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
+          <br>
+          <form role="form" method="POST" action="">
+          <!--<div class="form-group col-md-4">-->
+                {% csrf_token %}
+                <input type="hidden" name="project_id" value="{{modelone.id}}">
+                {{ form.skill_id.errors }}
+                <label for="{{ form.skill_id.id_for_label }}">Skill:</label>
+                {{ form.skill_id }}
+                <br>
+                {{ form.minimum.errors }}
+                <label for="{{ form.minimum.id_for_label }}">Necessary Experience:</label>
+                {{ form.minimum }}
+                <small>(1 → none; 5 → best available)</small>
+                <br>
+                <br>
+                {{ form.isMin.errors }}
+                <label for="{{ form.isMin.id_for_label }}">Emphasis:</label>
+                {{ form.isMin }}
+                <br>
+                <br>
+                <input type="submit" value="Add" class="btn btn-dark btn-lg btn-block">
+          <!--</div>-->
           </form>
-          </center>
+        </div>
+        <div class='col-sm-1'>
+        </div>
+        <div class="col-sm-7">
+          <h2>{{ modelone.name }}'s Skills:</h2>
+          <br>
+          <br>
+          <table class="table table-bordered table-hover">
+              <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Skill</th>
+                    <th scope="col">Necessary Experience</th>
+                    <th scope="col">Emphasis</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for skill in object_list %}
+                    <tr>
+                      <td>{{ skill.skill_id }}</td>
+                      <td>{{ skill.minimum }}</td>
+                      <td>{{ skill.isMin }}</td>
+                    </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
         </div>
     </div>
-  </div>
-  </br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class='row'>
+      <div class='col-sm-4'>
+        <a href='/projects/'>
+          <button type="button" class="btn btn-dark btn-lg btn-block">Return to Build Team</button>
+        </a>
+      </div>
+      <div class='col-sm-4'>
+          <form action="{% url 'proj_partner' modelone.id %}" method="post">{% csrf_token %}
+              <input type="submit" class="btn btn-dark btn-lg btn-block"
+              value="Return to Partner Preferences" />
+          </form>
+      </div>
+      <div class='col-sm-4'>
+          <!--MARK YOU NEED TO FIX THIS-->
+          <form action="{% url 'proj_skill' modelone.id %}" method="post">{% csrf_token %}
+              <input type="submit" class="btn btn-dark btn-lg btn-block"
+              value="Build Team!" />
+          </form>
+      </div>
+    </div>
+</div>
 {% endblock %}

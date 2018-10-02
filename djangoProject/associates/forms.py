@@ -4,14 +4,34 @@ from settings.models import locations,clients,client_levels, skills, skill_level
 
 
 class associateForm(forms.ModelForm):
-    name=forms.CharField(label='Name',max_length=50,widget=forms.TextInput(attrs={'class' : 'form-control'}))
-    location = forms.ModelChoiceField(label='Location',queryset=locations.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
-    rate=forms.IntegerField(label='Rate',widget=forms.NumberInput(attrs={'class' : 'form-control'}))
-    
+    name=forms.CharField(label='Name',
+        max_length=50,
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Enter name of associate..',
+        }
+    ))
+    location = forms.ModelChoiceField(label='Location',
+        queryset=locations.objects,
+        widget=forms.Select(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Choose office location..',
+        }
+    ))
+    rate=forms.IntegerField(label='Rate',
+        widget=forms.NumberInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Enter hourly rate in GBP..'
+        }
+    ))
+
     class Meta:
         model = associate_table
-        fields = '__all__' 
-        
+        fields = '__all__'
+
 class assoc_availForm(forms.ModelForm):
 
     associate_id = forms.ModelChoiceField(label='Associate',queryset=associate_table.objects,widget=forms.Select(attrs={'class' : 'form-control'}))
@@ -21,7 +41,7 @@ class assoc_availForm(forms.ModelForm):
     class Meta:
         model = assoc_availability
         fields = '__all__'
-        
+
 
 class assoc_partnerForm(forms.ModelForm):
 
@@ -54,6 +74,3 @@ class assoc_skillForm(forms.ModelForm):
     class Meta:
         model = assoc_skills
         fields = '__all__'
-
-
-        
