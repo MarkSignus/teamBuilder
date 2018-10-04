@@ -2,74 +2,55 @@
 
 {% block content %}
 
-<div class="col-sm-12">
-   <h2>Chosen Associates for {{ modelone.name }}:</h2>
-    </br>
-
-<form role="form" method="POST" action="" >
-<div class="form-group col-md-4">
-      {% csrf_token %}
-    
-    <input type="hidden" name="project_id" value="{{modelone.id}}">
-
-    <br>
-    {{ form.associate_id.errors }}
-        <label for="{{ form.associate_id.id_for_label }}">Associate:</label>
-    {{ form.associate_id }}
-      </br>
-      <input type="submit" value="Add" class="btn btn-outline-secondary">
-</div>
-</form>
-
  </br>
   </br>
- </br>
-    <h2>{{ modelone.name }}'s Associates:</h2>
-    </br>
-    <div class="table-responsive"> 
+    <div class='row'>
+       <div class='col-sm-3'>
+   </div>
+    <div class="col-sm-6">
+    <centre>
+       <h2>Chosen Associates for {{ modelone.name }}:</h2>
+    </centre>
+        </br>
 
-    <table class="table table-striped table-bordered table-hover">
-      <thead  class="thead-dark">
-        <tr>
-          <th scope="col">Associate Id</th>
-        </tr>
-      </thead>
-      <tbody>
-      {% for assoc in object_list %}
 
-        <tr>
 
-                <td>{{ assoc.associate_id }}</td>
-
-        </tr>
-
-            {% endfor %}
-      </tbody>
-    </table>
-    </div>
-</div>
-
-    <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='/projects/'>
-              <input type="submit" class="btn btn-outline-secondary" value="Projects" />
-          </form>
-          </center>
-        </div>
-    </div>
-</br>
-    <div class="row">
-        <div class="col-sm-1">
-          <br>
-          <center>
-            <form action='/projects/'>
-              <input type="submit" class="btn btn-outline-tertiary" value="Return" />
-          </form>
-          </center>
-        </div>
-    </div>
+          <table class="table table-bordered table-hover">
+              <thead  class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                  </tr>
+              </thead>
+              <tbody>
+                {% for assoc in object_list %}
+                  <tr>
+                    <td>{{ assoc.id }}</td>
+                    <td>{{ assoc.name }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+          </table>
   </div>
-  </br>
+
+  <div class='col-sm-3'>
+  </div>
+</div>
+
+</br>
+
+    <div class='row'>
+       <div class='col-sm-3'>
+   </div>
+      <div class='col-sm-6'>
+        <a href='/projects/'>
+          <button type="button" class="btn btn-dark btn-lg btn-block">Back to Projects</button>
+        </a>
+      </div>
+    </div>
+   <div class='col-sm-3'>
+   </div>
+    <br>
 {% endblock %}
+
+

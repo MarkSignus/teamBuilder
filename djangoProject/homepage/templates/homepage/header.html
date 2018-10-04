@@ -21,29 +21,39 @@
 	<br>
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class='navbar-collapse collapse'>
-					<a class="navbar-brand" href="#">
-							<img src="{% static 'homepage/img/logo.png' %}" class="responsive-img" style='max-height:50px;' alt="face">
-							<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
-							</button>-->
-					</a>
+   				<div class='col-sm-5'>
+					<div class='navbar-collapse collapse'>
+							<a class="navbar-brand" href="/"><h3>Home</h3></a>
+							<!--<ul class="nav">
+									<li class="nav-item">
+											<a class="nav-link" href="#">Home</a>
+									</li>
+							</ul>-->
+					</div>
 				</div>
-				<div class='navbar-collapse collapse justify-content-center'>
-					<a class="navbar-brand" href="#">
-							<img src="{% static 'homepage/img/HSF.png' %}" class="responsive-img" style='max-height:70px;' alt="face">
-							<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
-							</button>-->
-					</a>
+				<div class='col-sm-3'>
+
+					<div class='navbar-collapse collapse'>
+
+						<a class="navbar-brand" href="/">
+								<img src="{% static 'homepage/img/HSF.png' %}" class="responsive-img" style='max-width:200px;' alt="face">
+								<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-icon"></span>
+								</button>-->
+						</a>
+					</div>
 				</div>
-				<div class='navbar-collapse collapse justify-content-end'>
-						<a class="navbar-brand" href="/">Home</a>
-						<!--<ul class="nav">
-								<li class="nav-item">
-										<a class="nav-link" href="#">Home</a>
-								</li>
-						</ul>-->
+				<div class='col-sm-4'>
+
+					<div class='navbar-collapse collapse justify-content-end'>
+						<a class="navbar-brand" href="/">
+								<img src="{% static 'homepage/img/logo.png' %}" class="responsive-img" style='max-height:50px;' alt="face">
+								<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-icon"></span>
+								</button>-->
+						</a>
+
+					</div>
 				</div>
 			</nav>
 		</div>

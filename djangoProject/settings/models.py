@@ -27,7 +27,7 @@ class clients(models.Model):
         verbose_name_plural = "clients"
         
     def __str__(self):
-        return (self.name+'_'+str(self.id))
+        return (self.name+' ('+str(self.id)+')')
 
     
 #PARTNERS  
@@ -40,7 +40,7 @@ class partners(models.Model):
         verbose_name_plural = "partners"
         
     def __str__(self):
-        return (self.name+'_'+str(self.id))
+        return (self.name+' ('+str(self.id)+')')
 
     
     

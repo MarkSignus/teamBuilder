@@ -7,12 +7,10 @@
     <br>
     <br>
     <br>
-    <br>
     <div class="row">
         <div class="col-sm-4">
           <h2>Add Partner</h2>
               <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
-          <br>
           <br>
           <form role="form" method="POST" action="" >
           <!--<div class="form-group col-md-4">-->
@@ -23,13 +21,20 @@
                 <input type="submit" value="Add" class="btn btn-dark btn-lg btn-block">
           <!--</div>-->
           </form>
+           
+            </br>
+            </br>
+            </br>
+                      <form action='/settings/'>
+                <input type="submit" class="btn btn-dark btn-lg btn-block" value="Back to Settings" />
+            </form>
         </div>
         <div class='col-sm-1'>
         </div>
         <div class="col-sm-7">
           <h2>Partners on System</h2>
           <br>
-          <br>
+
           <table class="table table-bordered table-hover">
               <thead  class="thead-dark">
                   <tr>
@@ -48,19 +53,7 @@
           </table>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-sm-4">
-            <form action='/settings/'>
-                <input type="submit" class="btn btn-dark btn-lg btn-block" value="Return to Settings" />
-            </form>
-        </div>
-        <div class="col-sm-8">
-        </div>
-    </div>
+
 </div>
+    <br>
 {% endblock %}

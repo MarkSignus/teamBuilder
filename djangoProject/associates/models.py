@@ -24,9 +24,9 @@ class associate_table(models.Model):
 class assoc_client_relationship(models.Model):
         
     
-    associate_id = models.ForeignKey('associate_table', on_delete=models.PROTECT)
-    client_id = models.ForeignKey(clients, on_delete=models.PROTECT)
-    level=models.ForeignKey(client_levels, on_delete=models.PROTECT)
+    associate_id = models.ForeignKey('associate_table', on_delete=models.CASCADE)
+    client_id = models.ForeignKey(clients, on_delete=models.CASCADE)
+    level=models.ForeignKey(client_levels, on_delete=models.CASCADE)
     
  
     class Meta:
@@ -40,9 +40,9 @@ class assoc_client_relationship(models.Model):
 #ASSOC TO SKILLS MATRIX
 class assoc_skills(models.Model):
         
-    associate_id = models.ForeignKey('associate_table', on_delete=models.PROTECT)
-    skill_id = models.ForeignKey(skills, on_delete=models.PROTECT)
-    level=models.ForeignKey(skill_levels, on_delete=models.PROTECT)
+    associate_id = models.ForeignKey('associate_table', on_delete=models.CASCADE)
+    skill_id = models.ForeignKey(skills, on_delete=models.CASCADE)
+    level=models.ForeignKey(skill_levels, on_delete=models.CASCADE)
     
  
     class Meta:
@@ -55,9 +55,9 @@ class assoc_skills(models.Model):
 #ASSOC TO SKILLS MATRIX
 class assoc_availability(models.Model):
         
-    associate_id = models.ForeignKey('associate_table', on_delete=models.PROTECT)
-    week_id = models.ForeignKey(weeks, on_delete=models.PROTECT)
-    level=models.ForeignKey(availability_levels, on_delete=models.PROTECT)
+    associate_id = models.ForeignKey('associate_table', on_delete=models.CASCADE)
+    week_id = models.ForeignKey(weeks, on_delete=models.CASCADE)
+    level=models.ForeignKey(availability_levels, on_delete=models.CASCADE)
     
  
     class Meta:
@@ -70,9 +70,9 @@ class assoc_availability(models.Model):
 #ASSOC TO PARTNER MATRIX
 class assoc_partner_relationship(models.Model):
         
-    associate_id = models.ForeignKey('associate_table', on_delete=models.PROTECT)
-    partner_id = models.ForeignKey(partners, on_delete=models.PROTECT)
-    level=models.ForeignKey(partner_levels, on_delete=models.PROTECT)
+    associate_id = models.ForeignKey('associate_table', on_delete=models.CASCADE)
+    partner_id = models.ForeignKey(partners, on_delete=models.CASCADE)
+    level=models.ForeignKey(partner_levels, on_delete=models.CASCADE)
     
  
     class Meta:

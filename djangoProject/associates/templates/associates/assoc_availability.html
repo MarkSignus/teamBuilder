@@ -5,32 +5,29 @@
 <div class='container'>
     <br>
     <br>
-    <br>
     <div class="row">
-				<div class="col-sm-3">
-				</div>
-				<div class="col-sm-6">
-						<center>
-								<h1>{{ modelone.name }}</h1>
-								<!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
-						</center>
-				</div>
-				<div class="col-sm-3">
-				</div>
-		</div>
-    <br>
-    <br>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-6">
+                        
+                                <h1>{{ modelone.name }}</h1>
+                                <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
+                        
+                </div>
+                <div class="col-sm-5">
+                </div>
+        </div>
     <br>
     <br>
     <div class="row">
         <div class="col-sm-1">
         </div>
         <div class="col-sm-3">
-            <center>
+            
                 <h2>Add New</h2>
                 <!--<button type="button" class="btn btn-outline-secondary" href='/addUser/'>Add User</button>-->
-            </center>
-            <br>
+            
+
             <br>
             <form role="form" method="POST" action="" class"" >
                 <!--<div class="form-group col-md-4">-->
@@ -49,14 +46,23 @@
                 <input type="submit" value="Add" class="btn btn-dark btn-lg btn-block">
             <!--</div>-->
             </form>
+                        </br>
+            </br>
+            </br>
+
+
+            <form action='/associates/'>
+                <input type="submit" class="btn btn-dark btn-lg btn-block" value="Back to Associates" />
+            </form>
+
         </div>
         <div class='col-sm-2'>
         </div>
         <div class="col-sm-5">
-          <center>
-            <h2>{{ modelone.name }}'s Availability</h2>
-          </center>
-          <br>
+
+            <h2>Current Availability</h2>
+
+
           <br>
           <div class="table-responsive">
             <div class="table-responsive">
@@ -82,21 +88,7 @@
         <div class="col-sm-1">
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-sm-1">
-        </div>
-        <div class="col-sm-3">
-            <form action='/associates/'>
-                <input type="submit" class="btn btn-dark btn-lg btn-block" value="Back to Associates" />
-            </form>
-        </div>
-        <div class="col-sm-9">
-        </div>
-    </div>
+
 </div>
+    <br>
 {% endblock %}

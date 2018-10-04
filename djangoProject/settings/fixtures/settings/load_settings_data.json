@@ -239,6 +239,13 @@
       "name": "Intellectual Property Law"
     }
   },
+  {
+    "model": "settings.skills",
+    "pk": 6,
+    "fields": {
+      "name": "The Dark Arts"
+    }
+  },
 
 
 

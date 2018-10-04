@@ -4,14 +4,13 @@
 
 <div class='container'>
     <br>
-    <br>
+
     <br>
     <br>
     <br>
     <div class="row">
         <div class="col-sm-4">
           <h2>Skill Preferences</h2>
-          <br>
           <br>
           <form role="form" method="POST" action="">
           <!--<div class="form-group col-md-4">-->
@@ -41,7 +40,6 @@
         <div class="col-sm-7">
           <h2>{{ modelone.name }}'s Skills:</h2>
           <br>
-          <br>
           <table class="table table-bordered table-hover">
               <thead class="thead-dark">
                   <tr>
@@ -65,27 +63,27 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
     <div class='row'>
       <div class='col-sm-4'>
         <a href='/projects/'>
-          <button type="button" class="btn btn-dark btn-lg btn-block">Return to Build Team</button>
+          <button type="button" class="btn btn-dark btn-lg btn-block">Back to Projects</button>
         </a>
       </div>
       <div class='col-sm-4'>
           <form action="{% url 'proj_partner' modelone.id %}" method="post">{% csrf_token %}
               <input type="submit" class="btn btn-dark btn-lg btn-block"
-              value="Return to Partner Preferences" />
+              value="Back to Partner Preferences" />
           </form>
       </div>
       <div class='col-sm-4'>
           <!--MARK YOU NEED TO FIX THIS-->
-          <form action="{% url 'proj_skill' modelone.id %}" method="post">{% csrf_token %}
+          <form action="{% url 'proj_associates' modelone.id %}" method="post">{% csrf_token %}
               <input type="submit" class="btn btn-dark btn-lg btn-block"
               value="Build Team!" />
           </form>
       </div>
     </div>
 </div>
+    <br>
+  
 {% endblock %}

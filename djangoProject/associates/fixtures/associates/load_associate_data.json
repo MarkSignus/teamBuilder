@@ -126,15 +126,34 @@
       "skill_id": "1",
       "level": "3"
     }
-  },  {
+  },  
+  {
     "model": "associates.assoc_skills",
-    "pk": 5,
+    "pk": 6,
+    "fields": {
+      "associate_id": "1",
+      "skill_id": "6",
+      "level": "3"
+      }
+    },  
+    {
+    "model": "associates.assoc_skills",
+    "pk": 7,
+    "fields": {
+      "associate_id": "3",
+      "skill_id": "6",
+      "level": "3"
+      }
+    },  
+    {
+    "model": "associates.assoc_skills",
+    "pk": 8,
     "fields": {
       "associate_id": "4",
-      "skill_id": "2",
+      "skill_id": "6",
       "level": "3"
-    }
-  },
+      }
+    },
 
   {
     "model": "associates.assoc_partner_relationship",

@@ -4,7 +4,7 @@
 
 <div class='container'>
     <br>
-    <br>
+
     <br>
     <br>
     <br>
@@ -12,7 +12,7 @@
         <div class="col-sm-4">
           <h2>Client Preferences</h2>
           <br>
-          <br>
+
           <form role="form" method="POST" action=""  >
           <!--<div class="form-group col-md-4">-->
                 {% csrf_token %}
@@ -40,7 +40,7 @@
         <div class="col-sm-7">
           <h2>{{ modelone.name }}'s Client(s):</h2>
           <br>
-          <br>
+
           <table class="table table-bordered table-hover">
               <thead  class="thead-dark">
                   <tr>
@@ -64,12 +64,11 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
+
     <div class='row'>
       <div class='col-sm-6'>
         <a href='/projects/'>
-          <button type="button" class="btn btn-dark btn-lg btn-block">Return to Build Team</button>
+          <button type="button" class="btn btn-dark btn-lg btn-block">Back to Projects</button>
         </a>
       </div>
         <div class='col-sm-6'>
@@ -80,4 +79,5 @@
         </div>
     </div>
 </div>
+    <br>
 {% endblock %}

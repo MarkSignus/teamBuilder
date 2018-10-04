@@ -4,8 +4,8 @@ from settings.models import locations,clients,client_levels, skills, skill_level
 from associates.models import associate_table
 
 TRUE_FALSE_CHOICES = (
-    (True, 'Foster Development'),
-    (False, 'Prefer Experience')
+    (False, 'Prefer Experience'),
+    (True, 'Foster Development')
 )
 
 
@@ -35,6 +35,14 @@ class projForm(forms.ModelForm):
             attrs={
                 'class' : 'form-control',
                 'placeholder' : 'Enter the fee in GBP (thousands)'
+            }
+        ))
+    team_size=forms.IntegerField(
+        label='Team Size',
+        widget=forms.NumberInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Enter size of team'
             }
         ))
 
