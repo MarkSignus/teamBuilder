@@ -3,7 +3,7 @@
     "model": "associates.associate_table",
     "pk": 1,
     "fields": {
-      "name": "Mingy T",
+      "name": "George Thomas",
       "location": "2",
       "rate": "100"
     }
@@ -13,7 +13,7 @@
     "model": "associates.associate_table",
     "pk": 2,
     "fields": {
-      "name": "Mark OShea",
+      "name": "Tom Lewis",
       "location": "3",
       "rate": "105"
     }
@@ -21,7 +21,7 @@
     "model": "associates.associate_table",
     "pk": 3,
     "fields": {
-      "name": "Leem Marsh",
+      "name": "Susan Murphy",
       "location": "1",
       "rate": "80"
     }
@@ -29,7 +29,7 @@
     "model": "associates.associate_table",
     "pk": 4,
     "fields": {
-      "name": "Stan Darsh",
+      "name": "Rachel Pearson",
       "location": "2",
       "rate": "190"
     }
@@ -37,7 +37,7 @@
     "model": "associates.associate_table",
     "pk": 5,
     "fields": {
-      "name": "Jacob Sssssol",
+      "name": "Henry Barnes",
       "location": "1",
       "rate": "130"
     }
@@ -127,33 +127,7 @@
       "level": "3"
     }
   },  
-  {
-    "model": "associates.assoc_skills",
-    "pk": 6,
-    "fields": {
-      "associate_id": "1",
-      "skill_id": "6",
-      "level": "3"
-      }
-    },  
-    {
-    "model": "associates.assoc_skills",
-    "pk": 7,
-    "fields": {
-      "associate_id": "3",
-      "skill_id": "6",
-      "level": "3"
-      }
-    },  
-    {
-    "model": "associates.assoc_skills",
-    "pk": 8,
-    "fields": {
-      "associate_id": "4",
-      "skill_id": "6",
-      "level": "3"
-      }
-    },
+
 
   {
     "model": "associates.assoc_partner_relationship",

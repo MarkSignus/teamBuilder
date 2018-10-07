@@ -129,21 +129,21 @@
     "model": "settings.partners",
     "pk": 1,
     "fields": {
-      "name": "John Doe"
+      "name": "John Smith"
     }
   },
   {
     "model": "settings.partners",
     "pk": 2,
     "fields": {
-      "name": "Jane Doe"
+      "name": "Jane Brown"
     }
   },
   {
     "model": "settings.partners",
     "pk": 3,
     "fields": {
-      "name": "Richard Susskind"
+      "name": "Martin King"
     }
   },
 
@@ -239,13 +239,7 @@
       "name": "Intellectual Property Law"
     }
   },
-  {
-    "model": "settings.skills",
-    "pk": 6,
-    "fields": {
-      "name": "The Dark Arts"
-    }
-  },
+
 
 
 
